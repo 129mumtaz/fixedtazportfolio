@@ -149,15 +149,20 @@ section {
 }
 
 .dropdown {
-    z-index: 100;
-    position: absolute;
-    top: 0;
+    z-index: -999;
     transform: translateY(-500px);
     width: 100%;
     height: auto;
     backdrop-filter: brightness(0.8) blur(4px);
-    box-shadow: 0px 0px 20px var(--text-color);
     transition: 0.2s linear;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background:rgba(250, 235, 215, 0.95);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .dropdown .hamburger-links a {
@@ -168,6 +173,8 @@ section {
     padding: 15px 0;
     align-items: center;
     transition: 0.2s linear;
+     font-size: 1.5rem;
+  margin: 10px 0;
 }
 
 .dropdown .hamburger-links a:hover {
@@ -187,8 +194,9 @@ section {
 .main-container img {
     border: 10px solid #f5cbcb;
     border-radius: 1000px;
-    height: 400px;
-    width: 400px;
+    height: auto;
+    width: 80%;
+    max-width: 350px;
     object-fit: cover;
 }
 
@@ -259,6 +267,50 @@ section {
     60% { content: "Creator";}
     80% {content: "Coder";}
 }
+
+/* Tablet */
+@media (max-width: 992px) {
+  .main-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .content {
+    width: 90%;
+  }
+}
+
+/* HP Kecil */
+@media (max-width: 576px) {
+  :root {
+    --h1-font-size: 2.5rem;
+    --h2-font-size: 2rem;
+    --h3-font-size: 1.5rem;
+    --normal-font-size: 1rem;
+  }
+}
+  .nav-container {
+    padding: 0 15px;
+  }
+
+  .tools-grid,
+  .cert-container {
+    grid-template-columns: 1fr; /* 1 kolom di hp kecil */
+  }
+
+  .content h1 {
+    font-size: 2rem;
+  }
+
+  .content .typewriter {
+    font-size: 1.5rem;
+  }
+
+  .btn button {
+    width: 100%; /* full biar enak ditekan */
+  }
+
 
 @media screen and (max-width: 768px) {
     body{
@@ -377,6 +429,8 @@ button.cv-btn:hover {
   width: 80px;
   height: 80px;
   object-fit: contain;
+   max-width: 100%;
+  height: auto;
 }
 
 /* TOOLS & SKILLS */
@@ -461,6 +515,8 @@ button.cv-btn:hover {
   border-radius: 15px;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+   max-width: 100%;
+  height: auto;
 }
 
 .cert-card:hover {
@@ -525,7 +581,7 @@ button.cv-btn:hover {
 .testimonials {
   text-align: center;
   padding: 80px 20px;
-  background: #f9f9f9;
+  background: antiquewhite;
 }
 
 .testimonials p {
@@ -579,6 +635,7 @@ button.cv-btn:hover {
   padding: 60px 20px;
   text-align: center;
   background: #f9f9f9;
+  margin-top: 650px;
 }
 
 .contact-section h2 {
