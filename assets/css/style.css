@@ -149,20 +149,21 @@ section {
 }
 
 .dropdown {
-    z-index: -999;
+    z-index:9999;
     transform: translateY(-500px);
     width: 100%;
     height: auto;
-    backdrop-filter: brightness(0.8) blur(4px);
+    backdrop-filter: brightness(0.8) blur(2px);
     transition: 0.2s linear;
     position: fixed; 
     top: 0;
     left: 0;
-    height: 100vh;
-    background:rgba(250, 235, 215, 0.95);
+   background: rgba(250, 235, 215, 0.7);
     display: flex;
     flex-direction: column;
     justify-content: center;
+     -webkit-backdrop-filter: blur(10px);
+     pointer-events: auto;
 }
 
 .dropdown .hamburger-links a {
@@ -172,16 +173,20 @@ section {
     justify-content: center;
     padding: 15px 0;
     align-items: center;
-    transition: 0.2s linear;
      font-size: 1.5rem;
   margin: 10px 0;
+   transition: 0.3s ease;
+    border-radius: 8px;
 }
 
 .dropdown .hamburger-links a:hover {
-    background-color: var(--background-color)
+      background-color: rgba(255, 182, 193, 0.3); 
+  transform: scale(1.05); 
+  box-shadow: 0 4px 15px rgba(255, 64, 129, 0.4); 
 }
 
 .main-container {
+  z-index: -1;
     width: 100%;
     height: 90vh;
     display: flex;
@@ -436,6 +441,7 @@ button.cv-btn:hover {
 /* TOOLS & SKILLS */
 
 .TOOLS-SKILLS {
+  z-index: -1;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -483,6 +489,7 @@ button.cv-btn:hover {
 }
 
 .certif {
+  z-index: -1;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -578,7 +585,8 @@ button.cv-btn:hover {
   }
 
   /* Testimonials Section */
-.testimonials {
+.testimonials { 
+  z-index: -1;
   text-align: center;
   padding: 80px 20px;
   background: antiquewhite;

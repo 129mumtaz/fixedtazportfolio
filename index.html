@@ -6,12 +6,13 @@
     <title>Mumtaz Portfolio Ex Website</title>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
+    
 </head>
 <body>
     
     <nav>
         <div class="nav-container">
-        <div class="logo" data aos="fade-right" data aos="duration=1000">
+        <div class="logo" data-aos="fade-right" data-aos-duration="1000">
             <a href="#Home">Mumtaz's Portfolio</a> 
         </div>
         <div class="nav-links">
@@ -51,7 +52,7 @@
         <p>My name is Tsabit Abdurrazzaq Mumtaz, I’m 15 years old and live in Bekasi.
         I study at IDN Backpacker Sentul majoring in RPL (Software Engineering / Programming). I really enjoy learning, especially when it comes to coding. Aside from technology, I’m also skilled in several sports and like to keep myself active.</p>
         <div class="social-links">
-            <a href="https://github.com/tsabitmumtaz" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://github.com/129mumtaz" target="_blank"><i class="fa-brands fa-github"></i></a>
             <a href="https://www.linkedin.com/in/tsabit-abdurrazzaq-mumtaz-7775b7376/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
             <a href="https://www.instagram.com/main.tsabit/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
             <a href="https://x.com/mumtazmumtaaz" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
@@ -225,7 +226,14 @@
     function cancel(){
         const navbar = document.querySelector(".dropdown")
         navbar.style.transform = "translateY(-500px)"
+        const menu = document.querySelector(".dropdown");
+const toggle = document.querySelector(".hamburger");
+
+toggle.addEventListener("click", () => {
+  menu.classList.toggle("active");
+});
     }
+    
 </script> 
 
 <script src="https://kit.fontawesome.com/6f1d66b797.js" crossorigin="anonymous"></script>
