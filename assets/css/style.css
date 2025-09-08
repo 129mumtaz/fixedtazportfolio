@@ -47,6 +47,7 @@ nav {
     height: 10vh;
     position: sticky;
     background-color: antiquewhite;
+    z-index: 1000;
 }
 
 .nav-container {
@@ -186,7 +187,6 @@ section {
 }
 
 .main-container {
-  z-index: -1;
     width: 100%;
     height: 90vh;
     display: flex;
@@ -441,7 +441,6 @@ button.cv-btn:hover {
 /* TOOLS & SKILLS */
 
 .TOOLS-SKILLS {
-  z-index: -1;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -489,7 +488,6 @@ button.cv-btn:hover {
 }
 
 .certif {
-  z-index: -1;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -586,7 +584,6 @@ button.cv-btn:hover {
 
   /* Testimonials Section */
 .testimonials { 
-  z-index: -1;
   text-align: center;
   padding: 80px 20px;
   background: antiquewhite;
