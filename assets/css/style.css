@@ -47,7 +47,8 @@ nav {
     height: 10vh;
     position: sticky;
     background-color: antiquewhite;
-    z-index: 1000;
+    z-index: 1000; 
+    top: 0;
 }
 
 .nav-container {
